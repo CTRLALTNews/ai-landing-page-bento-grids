@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./styles.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: '#010101',
+            cardBackground: "#050505",
+            border: "#101010",
+            purple: '#9d4edd',
+            lightPurple: "#c77dff",
+            darkPurple: "#7b2cbf",
+            offWhite: '#fefdfd',
+          },
+          keyframes: {
+            blinkBackground: {
+              "50%": {
+                filter: "brightness(.75) blur(256px)",
+                transform: "scale(1)"
+              },
+              "0%, 100%": {
+                filter: "brightness(.25)  blur(256px)",
+                transform: "scale(.75)"
+              },
+            }
+          },
+          animation: {
+            "blinkBackground": "blinkBackground 15s linear infinite"
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-background w-screen h-fit overflow-x-hidden">
+  <div id="stars"></div>
+  <!--
+      Navbar
+    -->
+  <div class="w-full h-16 border-b border-border bg-background flex px-4 py-0 justify-end">
+    <ul class="flex h-full items-center gap-4  text-mds">
+      <li><a href="#" class="hover:text-lightPurple transition-colors">Home</a></li>
+      <li><a href="#features" class="hover:text-lightPurple transition-colors">Features</a></li>
+      <li><a href="#pricing" class="hover:text-lightPurple transition-colors">Prices</a></li>
+      <li>
+        <button class="py-2 px-4 bg-purple rounded text-sm hover:bg-darkPurple transition-colors">Sign Up</button>
+      </li>
+    </ul>
+  </div>
+
+  <!--
+      Hero Section
+    -->
+  <div class="w-full h-[calc(100vh-4rem-1px)] flex justify-center p-4">
+    <div class="w-full h-full flex items-center justify-center gap-8 max-w-5xl flex-col">
+      <div class="grid gap-8 items-start justify-center">
+        <div class="relative group">
+          <div
+            class="absolute -inset-0.5 bg-gradient-to-r from-darkPurple to-lightPurple rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt">
+          </div>
+          <button
+            class="relative px-7 py-4 bg-black rounded-full leading-none flex items-center divide-x divide-gray-600">
+            <span class="flex items-center space-x-5">
+              <i class="bi bi-stars text-purple text-sm sm:text-base"></i>
+              <span class="pr-6 text-sm sm:text-base">Get a 30 Day Free Trial</span>
+            </span>
+            <span class="pl-6 text-purple group-hover:text-offWhite transition duration-200 text-sm sm:text-base">Sign
+              Up
+              &rarr;</span>
+          </button>
+        </div>
+      </div>
+
+      <div>
+        <h2 class="text-5xl sm:text-8xl font-bold text-center">Why Waste Money On Marketing?</h2>
+      </div>
+
+      <div class="flex flex-col text-center gap-4">
+        <h3 class="text-lg sm:text-xl">Use <a class="text-purple font-bold" href="#features">
+            BuustQ AI
+            <i class="bi bi-cursor"></i>
+          </a> to Increase ROI in Seconds!</h3>
+        <h1 class="text-sm">BuustQ AI</h1>
+      </div>
+    </div>
+  </div>
+
+  <!--
+      Bento Grid
+    -->
+  <div class="w-full min-h-[calc(100vh-4rem-1px)] h-fit p-4 flex flex-col items-center justify-center relative gap-12"
+    id="features">
+    <h6 class="text-6xl font-bold"> Features</h6>
+
+    <div class="absolute h-full w-full max-w-5xl bg-purple rounded-full -z-10 blur-[256px] animate-blinkBackground">
+    </div>
+    <div
+      class="w-full h-fit max-w-7xl grid xl:grid-cols-4 xl:grid-rows-2 gap-8 grid-cols-1 grid-rows-6 sm:grid-cols-2 sm:grid-rows-3">
+
+      <div class="h-80 flex flex-col bg-cardBackground border border-border rounded-xl p-8 gap-4">
+        <div class="w-full h-1/3 flex flex-col  gap-4">
+          <h4 class="text-lg font-bold">Conversion Optimization</h4>
+          <hr class="border-[1px] border-border ">
+          <p class="text-sm text-gray-400">Uses AI to optimize landing pages and ads to increase conversion rates.</p>
+        </div>
+        <div class="h-2/3 h-full w-full flex items-center justify-center">
+          <i
+            class="bi bi-graph-up text-7xl bg-gradient-to-tr from-lightPurple to-purple bg-clip-text text-transparent"></i>
+        </div>
+      </div>
+
+      <div class="h-80 flex flex-col bg-cardBackground border border-border rounded-xl p-8 xl:col-span-2 gap-4">
+        <div class="w-full h-1/3 flex flex-col  gap-4">
+          <h4 class="text-lg font-bold">Competitive Intelligence</h4>
+          <hr class="border-[1px] border-border">
+          <p class="text-sm text-gray-400">Monitors your competitors' marketing efforts and metrics to identify
+            opportunities and
+            optimize your own strategy.</p>
+        </div>
+        <div class="h-2/3 h-full w-full flex items-center justify-center">
+          <i class="bi bi-cpu text-7xl bg-gradient-to-tr from-lightPurple to-purple bg-clip-text text-transparent"></i>
+        </div>
+      </div>
+
+      <div class="h-80 flex flex-col bg-cardBackground border border-border rounded-xl p-8 gap-4 xl:col-start-4">
+        <div class="w-full h-1/3 flex flex-col  gap-4">
+          <h4 class="text-lg font-bold">Analytics</h4>
+          <hr class="border-[1px] border-border">
+          <p class="text-sm text-gray-400">Provides detailed analytics to identify opportunities.</p>
+        </div>
+        <div class="h-2/3 h-full w-full flex items-center justify-center">
+          <i
+            class="bi bi-pie-chart text-7xl bg-gradient-to-tr from-lightPurple to-purple bg-clip-text text-transparent"></i>
+        </div>
+      </div>
+
+      <div class="h-80 flex flex-col bg-cardBackground border border-border rounded-xl p-8 gap-4 xl:row-start-2">
+        <div class="w-full h-1/3 flex flex-col  gap-4">
+          <h4 class="text-lg font-bold">Campaign Automation</h4>
+          <hr class="border-[1px] border-border">
+          <p class="text-sm text-gray-400">Automates repetitive marketing tasks to save time.</p>
+        </div>
+        <div class="h-2/3 h-full w-full flex items-center justify-center">
+          <i class="bi bi-gear text-7xl bg-gradient-to-tr from-lightPurple to-purple bg-clip-text text-transparent"></i>
+        </div>
+      </div>
+
+      <div class="h-80 flex flex-col bg-cardBackground border border-border rounded-xl p-8 gap-4 xl:row-start-2">
+        <div class="w-full h-1/3 flex flex-col  gap-4">
+          <h4 class="text-lg font-bold">Lead Scoring</h4>
+          <hr class="border-[1px] border-border">
+          <p class="text-sm text-gray-400">Scores and prioritizes leads based on fit and readiness to buy.</p>
+        </div>
+        <div class="h-2/3 h-full w-full flex items-center justify-center">
+          <i
+            class="bi bi-crosshair text-7xl bg-gradient-to-tr from-lightPurple to-purple bg-clip-text text-transparent"></i>
+        </div>
+      </div>
+
+      <div
+        class="h-80 flex flex-col bg-cardBackground border border-border rounded-xl p-8 gap-4 xl:row-start-2 xl:col-span-2">
+        <div class="w-full h-1/3 flex flex-col  gap-4">
+          <h4 class="text-lg font-bold">Personalization</h4>
+          <hr class="border-[1px] border-border">
+          <p class="text-sm text-gray-400">Customizes messaging and offers for each visitor to improve engagement.</p>
+        </div>
+        <div class="h-2/3 h-full w-full flex items-center justify-center">
+          <i
+            class="bi bi-person text-7xl bg-gradient-to-tr from-lightPurple to-purple bg-clip-text text-transparent"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+    Pricing
+  -->
+  <div class="w-full min-h-[calc(100vh-4rem-1px)] h-fit p-4 flex flex-col items-center justify-center gap-12"
+    id="pricing">
+    <h6 class="text-6xl font-bold"> Pricing</h6>
+
+    <div
+      class="w-full h-full grid grid-cols-1 grid-rows-3 md:grid-cols-2 md:grid-rows-2 lg:grid-cols-3 lg:grid-rows-1 gap-4 max-w-7xl place-items-center">
+
+      <div class="h-full w-full flex flex-col bg-cardBackground p-8 gap-8 rounded border border-border">
+        <div class=" flex flex-col gap-2">
+          <h6 class="text-xl font-bold">BuustQ AI Basic</h6>
+          <p class="text-sm text-gray-400">Essentials to boost ROI</p>
+          <p class="text-3xl font-bold">$49 <span class="text-base font-normal text-gray-400">/ Month</span></p>
+        </div>
+        <button class="bg-purple p-2 rounded text-sm hover:bg-darkPurple transition-colors">Try 30 Days Free</button>
+        <ul class="flex flex-col gap-2">
+          <li class="text-gray-400 text-sm"><i class="bi bi-check2-all text-purple mr-2"></i>Conversion Optimization
+          </li>
+          <li class="text-gray-400 text-sm"><i class="bi bi-check2-all text-purple mr-2"></i>Analytics</li>
+          <li class="text-gray-400 text-sm"><i class="bi bi-check2-all text-purple mr-2"></i>Lead Scoring</li>
+          <li class="text-gray-400 text-sm"><i class="bi bi-check2-all text-purple mr-2"></i>Personalization</li>
+          <li class="text-gray-400 text-sm"><i class="bi bi-x text-red-500 mr-2"></i>Campaign Automation</li>
+          <li class="text-gray-400 text-sm"><i class="bi bi-x text-red-500 mr-2"></i>Predictive Modeling</li>
+          <li class="text-gray-400 text-sm"><i class="bi bi-x text-red-500 mr-2"></i>Dedicated Account Manager</li>
+          <li class="text-gray-400 text-sm"><i class="bi bi-x text-red-500 mr-2"></i>API Access</li>
+        </ul>
+      </div>
+
+      <div class="h-full w-full flex flex-col bg-cardBackground p-8 gap-8 rounded border border-border">
+        <div class=" flex flex-col gap-2">
+          <h6 class="text-xl font-bold">BuustQ AI Professional </h6>
+          <p class="text-sm text-gray-400">Everything you need to optimize marketing</p>
+          <p class="text-3xl font-bold">$99 <span class="text-base font-normal text-gray-400">/ Month</span></p>
+        </div>
+        <button class="bg-purple p-2 rounded text-sm hover:bg-darkPurple transition-colors">Sign Up</button>
+        <ul class="flex flex-col gap-2">
+          <li class="text-gray-400 text-sm"><i class="bi bi-check2-all text-purple mr-2"></i>Conversion Optimization
+          </li>
+          <li class="text-gray-400 text-sm"><i class="bi bi-check2-all text-purple mr-2"></i>Analytics</li>
+          <li class="text-gray-400 text-sm"><i class="bi bi-check2-all text-purple mr-2"></i>Lead Scoring</li>
+          <li class="text-gray-400 text-sm"><i class="bi bi-check2-all text-purple mr-2"></i>Personalization</li>
+          <li class="text-gray-400 text-sm"><i class="bi bi-check2-all text-purple mr-2"></i>Campaign Automation</li>
+          <li class="text-gray-400 text-sm"><i class="bi bi-check2-all text-purple mr-2"></i>Predictive Modeling</li>
+          <li class="text-gray-400 text-sm"><i class="bi bi-x text-red-500 mr-2"></i>Dedicated Account Manager</li>
+          <li class="text-gray-400 text-sm"><i class="bi bi-x text-red-500 mr-2"></i>API Access</li>
+        </ul>
+      </div>
+
+      <div class="h-full w-full flex flex-col bg-cardBackground p-8 gap-8 rounded border border-border">
+        <div class=" flex flex-col gap-2">
+          <h6 class="text-xl font-bold">BuustQ AI Enterprise</h6>
+          <p class="text-sm text-gray-400">Advanced capabilities for full control</p>
+          <p class="text-3xl font-bold">$500 <span class="text-base font-normal text-gray-400">/ Month</span></p>
+        </div>
+        <button class="bg-purple p-2 rounded text-sm hover:bg-darkPurple transition-colors">Sign Up</button>
+
+        <ul class="flex flex-col gap-2">
+          <li class="text-gray-400 text-sm"><i class="bi bi-check2-all text-purple mr-2"></i>Conversion Optimization
+          </li>
+          <li class="text-gray-400 text-sm"><i class="bi bi-check2-all text-purple mr-2"></i>Analytics</li>
+          <li class="text-gray-400 text-sm"><i class="bi bi-check2-all text-purple mr-2"></i>Lead Scoring</li>
+          <li class="text-gray-400 text-sm"><i class="bi bi-check2-all text-purple mr-2"></i>Personalization</li>
+          <li class="text-gray-400 text-sm"><i class="bi bi-check2-all text-purple mr-2"></i>Campaign Automation</li>
+          <li class="text-gray-400 text-sm"><i class="bi bi-check2-all text-purple mr-2"></i>Predictive Modeling</li>
+          <li class="text-gray-400 text-sm"><i class="bi bi-check2-all text-purple mr-2"></i>Dedicated Account Manager
+          </li>
+          <li class="text-gray-400 text-sm"><i class="bi bi-check2-all text-purple mr-2"></i>API Access</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+</html>
